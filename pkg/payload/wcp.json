@@ -1,0 +1,32 @@
+{
+ "ops": [
+  {
+   "set": {
+    "xpath": "//service[@name='blm_ira_pandora']/@autorun",
+    "value": "no",
+    "reason": "Pandora is not used; the service only costs boot time"
+   }
+  },
+  {
+   "set": {
+    "xpath": "//service[@name='blm_ira_pandora']/@reset_board",
+    "value": "no",
+    "reason": "turned off: if anything still starts it and it fails, it must not reset the head unit"
+   }
+  },
+  {
+   "set": {
+    "xpath": "//service[@name='irs_server']/@autorun",
+    "value": "no",
+    "reason": "Pandora backend; its only client blm_ira_pandora is off; it only costs boot time"
+   }
+  },
+  {
+   "set": {
+    "xpath": "//service[@name='irs_server']/@reset_board",
+    "value": "no",
+    "reason": "turned off: if anything still starts it and it fails, it must not reset the head unit"
+   }
+  }
+ ]
+}
